@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  build:
+  typemill:
     container_name: typemill
     restart: always
     image: bluffy2006/typemill:latest
