@@ -1,0 +1,6 @@
+/data
+/html
+/docker-compose.yml
+/docker-compose*.*
+!docker-compose.dev.yml
+!docker-compose.example.yml

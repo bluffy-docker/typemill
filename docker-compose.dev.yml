@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  build:
+    container_name: typemill_dev
+    restart: always
+    image: bluffy2006/typemill
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data/settings:/var/www/html/settings
+      - ./data/cache/:/var/www/html/cache/ 
+      - ./data/content/:/var/www/html/content/ 
+      - ./data/media/:/var/www/html/media/ 
+      - ./data/themes/:/var/www/html/themes/ 
+      - ./data/plugins/:/var/www/html/plugins/ 
+    ports:
+      - '9080:80'     
+    environment:
+      - TYPEMILL_UID=1000
+      - TYPEMILL_GID=1000
